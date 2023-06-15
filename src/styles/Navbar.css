@@ -1,0 +1,66 @@
+body{
+    height: 200vh;
+}
+nav{
+    height: 100px;
+    display: flex;
+}
+.links, ul{
+    width: 100%;
+    padding-left: 50px;
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+ul{
+    gap: 50px;
+}
+.toggleButton{
+    display: none;    
+}
+.toggleButton svg {
+    font-size: 30px;
+}
+#open{
+    height: 100vh;
+    justify-content: flex-end;
+}
+#open .links, #open ul{
+    flex-direction: column;
+    padding-left: 0;
+}
+#open .links{
+    width: 40%;
+    height: 100%;
+    padding-right: 0;
+}
+#open ul{
+    padding-top: 30px;
+    gap: 30px;
+}
+#open .logo{
+    display: none;
+}
+@media only screen and (max-width: 600px) {
+    body{
+        height: 200vh;
+    }
+    .toggleButton{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .toggleButton button{
+        width: 70px;
+        background: none;
+        border: none;
+    }
+    .links{
+        padding-top: 20px;
+        width: 100%;
+        position: fixed;
+    }
+    #close ul{
+        display: none;
+    }
+}
