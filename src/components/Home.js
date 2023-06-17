@@ -4,10 +4,12 @@ import '../styles/Home.css'
 function Home() {
   return (
     <>
-      <div className='landingPage'>
+    <section className="landingContainer">
+      <div className="introduction">
         <h1>Hello, I'm <span>Kyele Beniga.</span></h1>
-        <h2>Developer</h2>
+        <h2>Developer.</h2>
       </div>
+    </section>
     </>
   )
 }

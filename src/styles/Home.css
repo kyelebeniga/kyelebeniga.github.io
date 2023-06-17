@@ -1,14 +1,32 @@
-.landingPage{
+.landingContainer{
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
 }
+.introduction span{
+    background: #0098CF;
+    background: linear-gradient(to right, #0098CF 43%, #00CFBA 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+h1,h2{
+    color: var(--clr-primary);
+}
 h1{
-    font-size: 36px;
+    font-size: 50px;
 }
 h2{
-    font-size: 30px;
+    font-size: 36px;
     font-weight: 500;
+}
+@media only screen and (max-width: 600px) {
+    h1{
+        font-size: 10vw;
+    }
+    h2{
+        font-size: 6vw;
+        font-weight: 300;
+    }
 }
