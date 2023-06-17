@@ -1,0 +1,14 @@
+.landingPage{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+h1{
+    font-size: 36px;
+}
+h2{
+    font-size: 30px;
+    font-weight: 500;
+}
