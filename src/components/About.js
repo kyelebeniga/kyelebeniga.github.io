@@ -2,9 +2,9 @@ import React from 'react'
 
 function About() {
   return (
-    <div className="aboutContainer">
-        
-    </div>
+    <section className="aboutContainer">
+
+    </section>
   )
 }
 
