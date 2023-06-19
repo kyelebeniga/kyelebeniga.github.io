@@ -7,14 +7,14 @@ import jsonData from './data/project.json'
 function Main() {
   return (
     <>
-    <section className="landingContainer">
+    <section className="landingContainer" id="home">
       <div className="introduction">
         <h1>Hello, I'm <span>Kyele Beniga.</span></h1>
         <h2>Developer.</h2>
       </div>
     </section>
 
-    <section className="aboutContainer">
+    <section className="aboutContainer" id="about">
       <div className="about">
         <h1>About me</h1>
         <p>
@@ -52,11 +52,18 @@ function Main() {
       </div>
     </section>
 
-    <section className="projectContainer">
+    <section className="projectContainer" id="projects">
         <h1>Projects</h1>
         <div className="project">
             {jsonData.map((object) => (
-                <div key={object.title} className={`projectCard ${object.clickable}`}>
+                <div
+                    key={object.title} className={`projectCard ${object.clickable}`}
+                    onClick={() => {
+                        if(object.clickable === 'clickable'){
+                            window.open(object.url);
+                        }
+                    }}
+                >
                     <img src={object.image} alt="" />
                     <div className="overlay">
                         <h3>{object.title}</h3>

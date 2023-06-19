@@ -12,6 +12,7 @@ a{
     text-decoration: none;
 }
 nav{
+    z-index: 1;
     height: 120px;
     position: fixed;
     width: 100%;
