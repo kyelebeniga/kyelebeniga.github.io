@@ -1,0 +1,48 @@
+/* --background: #1A1A1D;
+--clr-primary: #f5f5f5; */
+.aboutContainer{
+    color: var(--clr-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    padding: 50px;
+}
+.aboutContainer h1{
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+.about, .skills{
+    flex-wrap: wrap;
+    min-height: 300px;
+}
+.about p{
+    max-width: 60ch;
+    text-align: justify;
+}
+.skills{
+    flex-basis: 25%;
+}
+.skills ul{
+    flex-wrap: wrap;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+.skills ul li i{
+    font-size: 60px;
+}
+
+@media only screen and (max-width: 600px) {
+    .aboutContainer{
+        flex-direction: column;
+        gap: 0px;
+    }
+    .aboutContainer h1{
+        font-size: 4vh;
+    }
+    .aboutContainer p{
+        font-size: 1rem;
+    }
+}

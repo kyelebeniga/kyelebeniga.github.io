@@ -11,22 +11,26 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-h1,h2{
+.introduction h1,
+.introduction h2{
     color: var(--clr-primary);
 }
-h1{
+.introduction h1{
     font-size: 50px;
-}
-h2{
+} 
+.introduction h2{
     font-size: 36px;
     font-weight: 500;
     color: grey;
 }
 @media only screen and (max-width: 600px) {
-    h1{
+    .landingContainer{
+        
+    }
+    .introduction h1{
         font-size: 13vw;
     }
-    h2{
+    .introduction h2{
         font-size: 8vw;
     }
 }

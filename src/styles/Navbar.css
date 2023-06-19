@@ -1,3 +1,12 @@
+@keyframes right-to-left{
+    0%{
+        transform: translateX(900px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+
 a{
     color: inherit;
     text-decoration: none;
@@ -25,23 +34,23 @@ nav.sticky{
     color: rgb(125, 235, 229); 
     animation: blinker 1.5s step-start infinite;
 }
-.links, ul{
+.links, nav ul{
     width: 100%;
     padding-left: 50px;
     display: flex;
     align-items: center;
     list-style: none;
 }
-ul{
+nav ul{
     gap: 50px;
     font-size: 18px;
     padding-left: 100px;
 }
-ul li a{
+nav ul li a{
     font-weight: 400;
     position: relative;
 }
-ul li a:after{
+nav ul li a:after{
     position: absolute;
     left: 0;
     bottom: -1px;
@@ -53,7 +62,7 @@ ul li a:after{
     transform-origin: right;
     transition: transform 0.3s;
 }
-ul li a:hover:after{
+nav ul li a:hover:after{
     transform: scaleX(1);
     transform-origin: left;
 }
@@ -76,6 +85,7 @@ ul li a:hover:after{
     height: 100%;
     padding-right: 0;
     background-color: rgb(48, 48, 48);
+    animation: right-to-left 0.5s;
 }
 #open ul{
     padding-top: 30px;
@@ -89,6 +99,9 @@ ul li a:hover:after{
         width: 100%;
         display: flex;
         justify-content: flex-end;
+        position: fixed;
+        z-index: 1;
+        padding-top: 20px;
     }
     .toggleButton button{
         width: 70px;
@@ -97,7 +110,7 @@ ul li a:hover:after{
         color: var(--clr-primary);
     }
     .links{
-        padding-top: 20px;
+        padding-top: 50px;
         width: 100%;
     }
     .logo, #close ul{
