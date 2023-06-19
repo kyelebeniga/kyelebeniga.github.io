@@ -1,12 +1,10 @@
 import React from 'react'
 import '../styles/Home.css'
 import '../styles/About.css'
+import '../styles/Project.css'
 import jsonData from './data/project.json'
 
 function Main() {
-    jsonData.forEach((object) => {
-        console.log(object);
-    });
   return (
     <>
     <section className="landingContainer">
@@ -55,6 +53,19 @@ function Main() {
     </section>
 
     <section className="projectContainer">
+        <h1>Projects</h1>
+        <div className="project">
+            {jsonData.map((object) => (
+                <div key={object.title} className={`projectCard ${object.clickable}`}>
+                    <img src={object.image} alt="" />
+                    <div className="overlay">
+                        <h3>{object.title}</h3>
+                        <p className="stack">{object.stack.join(" • ")}</p>
+                        <p>{object.description}</p>
+                    </div>
+                </div>
+            ))}
+        </div>
     </section>
     </>
   )

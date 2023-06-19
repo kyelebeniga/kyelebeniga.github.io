@@ -1,0 +1,73 @@
+.projectContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50px;
+}
+.projectContainer h1{
+    color: var(--clr-primary);
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+.project{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+}
+.project p,
+.project h3{
+    color: var(--clr-primary);
+}
+.projectCard{
+    border-radius: 12px;
+    max-height: 225px;
+    max-width: 415px;
+    background-color: rgb(43, 46, 49);
+    overflow: hidden;
+    position: relative
+}
+.projectCard img{
+    width:100%;
+    height:100%;
+}
+.projectCard:last-child{
+    max-height: 450px;
+    max-width: 230px;
+}
+.overlay, .projectCard:last-child .overlay{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 70%, rgba(9,9,10,0) 100%);
+    transition: 0.3s;
+    transform: translateY(250px);
+    padding-left: 15px;
+    padding-right: 5px;
+    padding-top: 30px;
+}
+.projectCard:last-child .overlay{
+    padding-top: 70px;
+    transform: translateY(400px);
+}
+.projectCard:hover:not(:last-child) .overlay{
+    transform: translateY(50px);
+}
+.projectCard:last-child:hover .overlay{
+    transform: translateY(160px);
+}
+.clickable:hover{
+    cursor: pointer;
+}
+@media only screen and (max-width: 600px) {
+    .project{
+        flex-grow: 0;
+    }
+    .projectCard:hover:not(:last-child) .overlay{
+        transform: translateY(0px);
+    }
+}
