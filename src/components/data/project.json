@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Movie House System",
+    "stack": ["Laravel", "HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+    "description": "A web app that lets people book tickets and reserve seats for movies. Created during my internship at LogicBase Interactive.",
+    "image": "../media/mhs.png"
+  },
+  {
+    "title": "Frontier",
+    "stack": ["HTML", "CSS", "JavaScript"],
+    "description": "A mock space-themed website I coded in collaboration with a student web designer.",
+    "image": "../media/frontier.png"
+  },
+  {
+    "title": "R.GG",
+    "stack": ["React", "HTML", "CSS", "JavaScript"],
+    "description": "A landing page created using the React framework. Inspired by the League of Legends website, U.GG",
+    "image": "../media/rgg.png"
+  },
+  {
+    "title": "League Buddy",
+    "stack": ["HTML", "CSS", "JavaScript"],
+    "description": "A website that uses the Data Dragon API from Riot Games to show information about a champion from League of Legends.",
+    "image": "../media/leaguebuddy.png"
+  },
+  {
+    "title": "Mechanicall",
+    "stack": ["Flutter", "Dart", "Firebase"],
+    "description": "A phone app that helps drivers on the road contact nearby mechanics if their car breaks down. Created for my college thesis.",
+    "image": "../media/mechanicall.png"
+  }
+]
