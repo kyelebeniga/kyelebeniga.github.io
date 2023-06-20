@@ -13,7 +13,6 @@ function Main() {
         <h2>Developer.</h2>
       </div>
     </section>
-
     <section className="aboutContainer" id="about">
       <div className="about">
         <h1>About me</h1>
@@ -51,7 +50,6 @@ function Main() {
         </ul>
       </div>
     </section>
-
     <section className="projectContainer" id="projects">
         <h1>Projects</h1>
         <div className="project">
@@ -73,6 +71,11 @@ function Main() {
                 </div>
             ))}
         </div>
+    </section>
+    <section className="contactContainer" id="contact">
+      <div>
+        
+      </div>
     </section>
     </>
   )
