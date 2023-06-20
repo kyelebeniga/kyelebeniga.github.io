@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import Main from './components/Main';
+import Contact from './components/Contact';
 import './styles/App.css';
 
 const App = () => {
@@ -8,6 +9,7 @@ const App = () => {
         <div className='App'>
             <Navbar />
             <Main />
+            <Contact />
         </div>
     );
 };

@@ -2,25 +2,9 @@ import React, { useRef } from 'react'
 import '../styles/Home.css'
 import '../styles/About.css'
 import '../styles/Project.css'
-import '../styles/Contact.css'
 import jsonData from './data/project.json'
-import emailjs from '@emailjs/browser'
 
 function Main() {
-  const form = useRef();
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs.sendForm('service_uahbuc9', 'template_x4mfu9t', form.current, 'puI6GfbTIMWrvu0af')
-    .then((result) => {
-      console.log(result.text);
-    }, (error) => {
-      console.log(error.text);
-    });
-    e.target.reset();
-  };
-
   return (
     <>
       <section className="landingContainer" id="home">
@@ -92,34 +76,6 @@ function Main() {
               </div>
             </div>
           ))}
-        </div>
-      </section>
-      <section className="contactContainer" id="contact">
-        <div>
-          <div className="contact-form">
-            <h1>Contact</h1>
-            <p>
-              Feel free to contact me by using the form below and I will get
-              back to you as soon as possible!
-            </p>
-            <form id="my-form" ref={form} onSubmit={sendEmail}>
-              <label>Email</label>
-              <input
-                type="email"
-                placeholder="Enter your email"
-                name="email"
-                id="email"
-              />
-              <label>Message</label>
-              <textarea
-                type="text"
-                placeholder="Enter your message"
-                name="message"
-                id="message"
-              ></textarea>
-              <input type="submit" id="my-form-button" value="Submit"></input>
-            </form>
-          </div>
         </div>
       </section>
     </>
