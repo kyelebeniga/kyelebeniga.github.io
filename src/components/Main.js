@@ -35,7 +35,7 @@ function Main() {
               <i className="devicon-css3-plain" title="CSS"></i>
             </li>
             <li>
-              <i className="devicon-laravel-plain" title="Laravel"></i>
+              <i className="devicon-react-plain" title="React"></i>
             </li>
             <li>
               <i className="devicon-javascript-plain" title="JavaScript"></i>
@@ -44,10 +44,7 @@ function Main() {
               <i className="devicon-php-plain" title="PHP"></i>
             </li>
             <li>
-              <i
-                className="devicon-github-original-wordmark"
-                title="Github"
-              ></i>
+              <i className="devicon-github-original-wordmark" title="Github"></i>
             </li>
             <li>
               <i className="devicon-mysql-plain-wordmark" title="MySQL"></i>
