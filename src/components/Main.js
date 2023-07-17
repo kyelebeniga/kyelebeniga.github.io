@@ -37,6 +37,19 @@ function Main() {
       x: 0,
     },
   };
+  const listVariant = {
+    hidden: {
+      opacity: 0,
+      x: 75
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        staggerChildren: 1
+      }
+    },
+  };
 
 
 
@@ -69,6 +82,7 @@ function Main() {
         <div className="skills">
           <Framer variant={rightVariant}>
             <h1>Skills</h1>
+            <Framer variant={listVariant}>
             <ul>
               <li>
                 <i className="devicon-html5-plain" title="HTML"></i>
@@ -92,32 +106,35 @@ function Main() {
                 <i className="devicon-mysql-plain-wordmark" title="MySQL"></i>
               </li>
             </ul>
+            </Framer>
           </Framer>
         </div>
       </section>
-      <section className="projectContainer" id="projects">
-        <h1>Projects</h1>
-        <div className="project">
-          {jsonData.map((object) => (
-            <div
-              key={object.title}
-              className={`projectCard ${object.clickable}`}
-              onClick={() => {
-                if (object.clickable === "clickable") {
-                  window.open(object.url);
-                }
-              }}
-            >
-              <img src={object.image} alt="" />
-              <div className="overlay">
-                <h3>{object.title}</h3>
-                <p className="stack">{object.stack.join(" • ")}</p>
-                <p>{object.description}</p>
+      <Framer variant={mainVariant}>
+        <section className="projectContainer" id="projects">
+          <h1>Projects</h1>
+          <div className="project">
+            {jsonData.map((object) => (
+              <div
+                key={object.title}
+                className={`projectCard ${object.clickable}`}
+                onClick={() => {
+                  if (object.clickable === "clickable") {
+                    window.open(object.url);
+                  }
+                }}
+              >
+                <img src={object.image} alt="" />
+                <div className="overlay">
+                  <h3>{object.title}</h3>
+                  <p className="stack">{object.stack.join(" • ")}</p>
+                  <p>{object.description}</p>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
-      </section>
+            ))}
+          </div>
+        </section>
+      </Framer>
     </>
   );
 }

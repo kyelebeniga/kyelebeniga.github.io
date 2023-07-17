@@ -22,8 +22,7 @@ export const Framer = ({ children, variant }) => {
         initial = "hidden"
         animate = {mainControls}
         transition={{ 
-          type: 'spring',
-          stiffness: 100,
+          type: 'spring', 
         }}
       >
         {children}
