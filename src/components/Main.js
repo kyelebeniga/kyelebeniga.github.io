@@ -3,53 +3,96 @@ import '../styles/Home.css'
 import '../styles/About.css'
 import '../styles/Project.css'
 import jsonData from './data/project.json'
+import { Framer } from './Framer'
 
 function Main() {
+// Animation variants for Framer.js
+  const mainVariant = {
+    hidden: {
+      opacity: 0,
+      y: 75
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+    },
+  };
+  const leftVariant = {
+    hidden: {
+      opacity: 0,
+      x: -75
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+    },
+  };
+  const rightVariant = {
+    hidden: {
+      opacity: 0,
+      x: 75
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+    },
+  };
+
+
+
   return (
     <>
       <section className="landingContainer" id="home">
         <div className="introduction">
-          <h1>
-            Hello, I'm <span>Kyele Beniga.</span>
-          </h1>
-          <h2>Developer.</h2>
+          <Framer variant={mainVariant}>
+            <h1>
+              Hello, I'm <span>Kyele Beniga.</span>
+            </h1>
+          </Framer>
+          <Framer variant={mainVariant}>
+            <h2>Developer.</h2> 
+          </Framer>
         </div>
       </section>
       <section className="aboutContainer" id="about">
         <div className="about">
-          <h1>About me</h1>
-          <p>
-            I'm an enthusiastic web developer with a strong passion for creating
-            feature-rich websites. I'm open to job opportunities where I can
-            learn and grow, as well as work with a team of like-minded
-            individuals moving towards a common goal.
-          </p>
+          <Framer variant={leftVariant}>
+            <h1>About me</h1>
+            <p>
+              I'm an enthusiastic web developer with a strong passion for creating
+              feature-rich websites. I'm open to job opportunities where I can
+              learn and grow, as well as work with a team of like-minded
+              individuals moving towards a common goal.
+            </p>
+          </Framer>
         </div>
         <div className="skills">
-          <h1>Skills</h1>
-          <ul>
-            <li>
-              <i className="devicon-html5-plain" title="HTML"></i>
-            </li>
-            <li>
-              <i className="devicon-css3-plain" title="CSS"></i>
-            </li>
-            <li>
-              <i className="devicon-react-plain" title="React"></i>
-            </li>
-            <li>
-              <i className="devicon-javascript-plain" title="JavaScript"></i>
-            </li>
-            <li>
-              <i className="devicon-php-plain" title="PHP"></i>
-            </li>
-            <li>
-              <i className="devicon-github-original-wordmark" title="Github"></i>
-            </li>
-            <li>
-              <i className="devicon-mysql-plain-wordmark" title="MySQL"></i>
-            </li>
-          </ul>
+          <Framer variant={rightVariant}>
+            <h1>Skills</h1>
+            <ul>
+              <li>
+                <i className="devicon-html5-plain" title="HTML"></i>
+              </li>
+              <li>
+                <i className="devicon-css3-plain" title="CSS"></i>
+              </li>
+              <li>
+                <i className="devicon-react-plain" title="React"></i>
+              </li>
+              <li>
+                <i className="devicon-javascript-plain" title="JavaScript"></i>
+              </li>
+              <li>
+                <i className="devicon-php-plain" title="PHP"></i>
+              </li>
+              <li>
+                <i className="devicon-github-original-wordmark" title="Github"></i>
+              </li>
+              <li>
+                <i className="devicon-mysql-plain-wordmark" title="MySQL"></i>
+              </li>
+            </ul>
+          </Framer>
         </div>
       </section>
       <section className="projectContainer" id="projects">
